@@ -1,0 +1,45 @@
+ObiWanBenoni — Yesterday at 10:06 AM
+Hey.
+You can use these two scripts to generate the hashes of all your images. They need to live in a directory called /images, you can then use the second script to take all these hashes and create a provenance hash and it also checks that each hash (image) is unique. 
+'use strict';
+
+const imagesDir = './images/';
+const fs = require('fs');
+const crypto = require('crypto');
+const hashes = [];
+const provenanceHash = ''
+
+const createHashFromFile = filePath => new Promise(resolve => {
+    const hash = crypto.createHash('sha256');
+    fs.createReadStream(filePath).on('data', data => hash.update(data)).on('end', () => resolve(hash.digest('hex')));
+  });
+
+fs.readdir(imagesDir, (err, files) => {
+  files.forEach(file => {    
+    (async () => {
+        const hash = await createHashFromFile(`${imagesDir}${file}`);
+        console.log(`{"tokenId":${parseInt(file.replace('.png', ''))}, "hash":"${hash}"},`)
+    })();
+  });  
+});
+
+const fs = require('fs');
+let obj = {};
+let provenanceHash = '';
+
+fs.readFile('image-hashes.json', handleFile)
+
+function handleFile(err, data) {
+    if (err) throw err
+    obj = JSON.parse(data);
+    
+    obj.forEach(o => {
+        if(obj.find(x => x.hash === o.hash && x.tokenId !== o.tokenId)) {
+            console.error(`${o.tokenId} with hash (${o.hash}) is not unique`);
+            throw err;
+        } else {
+            provenanceHash += o.hash;
+        }
+    });
+    fs.writeFileSync("provenance-hash.txt", provenanceHash);
+}

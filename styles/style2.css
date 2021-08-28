@@ -1,0 +1,223 @@
+@font-face {
+font-family: 'ReallyFree';
+src: url('../fonts/ReallyFree.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: 'ReallyFree';
+src: url('../fonts/ReallyFree.ttf') format('opentype');
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+font-family: 'Montserrat-Light';
+src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+font-weight: 300;
+font-style: regular;
+font-display: swap;
+}
+
+
+#bodyy {
+background-color: #99a142;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23adaf42' fill-opacity='0.21'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.montserrat {
+    font-family: Montserrat-Light, sans-serif;
+}
+.ReallyFree {
+    font-family: ReallyFree, sans-serif;
+}
+  
+.ReallyFree {
+    font-family: ReallyFree, sans-serif;
+}
+
+.text-blau {
+    color: #6f593f;
+}
+
+.bg-blau {
+    background-color: #6f593f;
+}
+
+.roadmapparent {
+    position: relative;
+   }
+.hero1walk
+    {
+      position:absolute;
+      max-width: 9%;
+      height: auto;
+      width: auto\9; /* ie8 */
+      top: 6%;
+      left: 8%;
+      z-index: 1;
+    }
+.hero2walk
+{
+    position:absolute;
+    max-width: 9%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    top: 70%;
+    left: 30%;
+    z-index: 2;
+}
+.hero3walk
+{
+    position:absolute;
+    max-width: 9%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    top: 5%;
+    left: 50%;
+    z-index: 3;
+}
+.hero4walk
+{
+    position:absolute;
+    max-width: 9%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    top: 70%;
+    left: 75%;
+    z-index: 4;
+}
+.hero5walk
+{
+    position:absolute;
+    max-width: 9%;
+    height: auto;
+    transform: scaleX(-1);
+    width: auto\9; /* ie8 */
+    top: 30%;
+    left: 88%;
+    z-index: 5;
+}
+
+.info1
+{
+    position:absolute;
+    max-width: 12%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    top: -12%;
+    left: 7.5%;
+    z-index: 6;
+}
+
+.info2
+{
+    position:absolute;
+    max-width: 15%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    top: 46%;
+    left: 25.5%;
+    z-index: 7;
+}
+
+.info3
+{
+    position:absolute;
+    max-width: 15%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    top: -18%;
+    left: 46.5%;
+    z-index: 8;
+}
+
+.info4
+{
+    position:absolute;
+    max-width: 15%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    top: 45%;
+    left: 71.5%;
+    z-index: 9;
+}
+
+.info5
+{
+    position:absolute;
+    max-width: 15%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    top: 5%;
+    left: 84%;
+    z-index: 10;
+}
+
+.bounce {
+    animation-name: info1;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes info1 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-50px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+.box {
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
